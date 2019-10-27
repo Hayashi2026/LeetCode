@@ -1,22 +1,22 @@
 /*
- * @lc app=leetcode id=26 lang=kotlin
+ * @lc app=leetcode id=27 lang=kotlin
  *
- * [26] Remove Duplicates from Sorted Array
+ * [27] Remove Element
  */
 
 // @lc code=start
 class Solution {
-    fun removeDuplicates(nums: IntArray): Int {
+    fun removeElement(nums: IntArray, `val`: Int): Int {
         var left = 0
         var right = 0
         while (right < nums.size) {
-            if (nums[left] != nums[right]) {
-                left++
+            if (nums[right] != `val`) {
                 nums[left] = nums[right]
+                left++
             }
             right++
         }
-        return left + 1
+        return left
     }
 }
 // @lc code=end
