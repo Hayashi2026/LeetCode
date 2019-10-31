@@ -15,6 +15,7 @@ class Solution {
                 if (!isDuplicateTwice) {
                     isDuplicateTwice = true
                     left++
+                    nums[left] = nums[right]
                 }
             } else {
                 left++
